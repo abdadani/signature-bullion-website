@@ -3,16 +3,16 @@ import { ArrowRight } from "lucide-react";
 
 export function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32 px-6 md:px-8 lg:px-16 bg-[color:var(--cream)] overflow-hidden">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="relative py-14 sm:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-16 bg-[color:var(--cream)] overflow-hidden">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
         <div className="relative">
           <img src={aboutImg} alt="Signature gold bars" width={1024} height={1024} loading="lazy"
-            className="rounded-2xl shadow-2xl object-cover aspect-square" />
-          <div className="absolute -bottom-6 -right-6 h-32 w-32 gold-gradient rounded-2xl -z-10" />
+            className="w-full rounded-2xl shadow-2xl object-cover aspect-square md:aspect-[4/5] lg:aspect-square" />
+          <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 h-24 w-24 sm:h-32 sm:w-32 gold-gradient rounded-2xl -z-10" />
         </div>
         <div>
-          <div className="text-sm tracking-[0.3em] text-[color:var(--gold-dark)] mb-3">ABOUT US</div>
-          <h2 className="font-serif text-4xl md:text-5xl text-[color:var(--ink)] mb-6">About the company</h2>
+          <div className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] text-[color:var(--gold-dark)] mb-3">ABOUT US</div>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[color:var(--ink)] mb-4 sm:mb-6">About the company</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Signature Bullion Gold Trading LLC is a leading gold trading company in the UAE, thanks to our solid reputation, finest quality products and exceptional customer service.
           </p>

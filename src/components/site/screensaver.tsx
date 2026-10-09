@@ -298,7 +298,7 @@ const CSS = `
 
 .ss-lockup {
   --gold: linear-gradient(180deg, #f8ec9c 0%, #dcb65c 42%, #a97a2a 72%, #7d4f17 100%);
-  font-size: clamp(2.1rem, 8.5vw, 7rem);
+  font-size: clamp(1.6rem, min(8.5vw, 11svh), 7rem);
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;

@@ -16,25 +16,25 @@ const items = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-24 md:py-32 px-6 md:px-8 lg:px-16 bg-[color:var(--ink)] text-white">
+    <section id="gallery" className="py-14 sm:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-16 bg-[color:var(--ink)] text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
+        <div className="flex flex-wrap items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-14">
           <div>
-            <div className="text-sm tracking-[0.3em] text-[color:var(--gold)] mb-3">GALLERY</div>
-            <h2 className="font-serif text-4xl md:text-5xl gold-text">Signature Bullion Gold Trading</h2>
+            <div className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] text-[color:var(--gold)] mb-3">GALLERY</div>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl gold-text">Signature Bullion Gold Trading</h2>
           </div>
           <a href="#contact" className="text-[color:var(--gold)] border border-[color:var(--gold)] rounded-full px-6 py-2.5 text-sm hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)] transition-all">
             Show More
           </a>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
           {items.map((it) => (
             <div key={it.title} className="group relative aspect-square overflow-hidden rounded-xl">
               <img src={it.img} alt={it.title} width={600} height={600} loading="lazy"
                 className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-5 right-5">
-                <h3 className="font-serif text-xl text-white">{it.title}</h3>
+              <div className="absolute bottom-2.5 left-3 right-3 sm:bottom-4 sm:left-5 sm:right-5">
+                <h3 className="font-serif text-sm sm:text-lg lg:text-xl leading-tight text-white">{it.title}</h3>
               </div>
             </div>
           ))}

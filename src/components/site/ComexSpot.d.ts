@@ -5,7 +5,7 @@ interface ComexSpotProps {
   data: Array<{
     label: string;
     value: string | number;
-    change?: 'up' | 'down' | '';
+    change?: string;
   }>;
   titleStyle?: string;
 }

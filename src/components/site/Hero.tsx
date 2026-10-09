@@ -171,25 +171,25 @@ const prevPricesRef = useRef<{
 
 
   return (
-    <section id="home" className="relative min-h-[100vh] w-full overflow-hidden">
+    <section id="home" className="relative min-h-svh w-full overflow-hidden">
       <img src={heroImgNew} alt="Gold bars" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1088} />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/20" />
-      <div className="relative z-10 flex min-h-[100vh] items-center px-6 md:px-8 lg:px-16 pt-32">
-        <div className="max-w-2xl text-white">
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] gold-text font-bold">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/65 to-black/55 lg:bg-gradient-to-r lg:from-black/85 lg:via-black/60 lg:to-black/20" />
+      <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-[120rem] flex-col justify-center gap-8 px-4 pb-10 pt-28 sm:px-6 sm:pt-32 md:px-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-10 lg:pt-36 xl:gap-12 xl:px-16">
+        <div className="text-white lg:col-span-5">
+          <h1 className="font-serif text-4xl font-bold leading-[1.08] gold-text sm:text-5xl md:text-6xl xl:text-7xl">
             Trusted Gold Bar Supplier in UAE
           </h1>
-          <p className="mt-6 text-base md:text-lg text-white/80 max-w-lg leading-relaxed">
+          <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/80 sm:mt-6 sm:text-base md:text-lg">
             We serve gold traders with high-purity gold bars, transparent pricing, and trusted long-term partnerships.
           </p>
-          <a href="#contact" className="mt-10 inline-flex items-center gap-3 rounded-full border border-[color:var(--gold)] px-8 py-3.5 text-sm font-medium text-white hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)] transition-all">
+          <a href="#contact" className="mt-6 inline-flex items-center gap-3 rounded-full border border-[color:var(--gold)] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)] sm:mt-10 sm:px-8 sm:py-3.5">
             Get a Quote
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[color:var(--gold)] text-[color:var(--ink)]">
               <ArrowRight className="h-4 w-4" />
             </span>
           </a>
         </div>
-        <div className="home-hero-section">
+        <div className="home-hero-section flex min-w-0 flex-col gap-5 rounded-3xl p-3 sm:gap-6 sm:p-5 lg:col-span-7 xl:p-6">
           <ComexSpot title="Gold Spot" data={goldData} titleStyle="text-[#E4DE8C]" />
           <ComexSpot title="Silver Spot" data={silverData} titleStyle="text-gray-300" />
         </div>
