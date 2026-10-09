@@ -1,0 +1,23 @@
+.home-hero-section {
+    background: linear-gradient(101deg, rgba(60, 8, 19, 0.85) 0%, rgba(60, 8, 19, 0.85) 65.24%),
+        url('../../assets/home-bg.jpg') lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(85vw);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-ticker {
+    animation: ticker 20s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+}

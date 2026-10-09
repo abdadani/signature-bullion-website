@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  # Vite 8 needs a recent Node version
+  NODE_VERSION = "22"
+  # Tell the project to build for Netlify instead of its Cloudflare default
+  NITRO_PRESET = "netlify"

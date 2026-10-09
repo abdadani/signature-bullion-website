@@ -1,0 +1,332 @@
+/* Screensaver Container */
+.screensaver-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* Background Particles */
+.screensaver-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.screensaver-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(228, 222, 140, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 15%;
+  animation: float 25s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.particle-3 {
+  width: 250px;
+  height: 250px;
+  bottom: 10%;
+  left: 30%;
+  animation: float 30s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+.particle-4 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 5%;
+  animation: float 22s ease-in-out infinite;
+  animation-delay: -7s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Main Content */
+.screensaver-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo Animation */
+.logo-animated {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-scale 4s ease-in-out infinite;
+}
+
+.logo-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(228, 222, 140, 0.4));
+  animation: rotate-logo 8s linear infinite;
+}
+
+/* Screensaver Image Animation */
+.screensaver-image {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-scale 4s ease-in-out infinite;
+}
+
+.screensaver-pic {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(228, 222, 140, 0.5)) brightness(1.1);
+  animation: rotate-logo 8s linear infinite;
+}
+
+/* Animated Text Styles */
+.animated-text-container {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.animated-text {
+  font-size: 48px;
+  font-weight: 700;
+  color: #E4DE8C;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px rgba(228, 222, 140, 0.5),
+    0 0 20px rgba(228, 222, 140, 0.3);
+  animation: text-glow 2s ease-in-out infinite;
+}
+
+.cursor-blink {
+  animation: blink-cursor 1s steps(1) infinite;
+  margin-left: 4px;
+}
+
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(228, 222, 140, 0.5),
+      0 0 20px rgba(228, 222, 140, 0.3);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px rgba(228, 222, 140, 0.8),
+      0 0 40px rgba(228, 222, 140, 0.5);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes blink-cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rotating Rings */
+.rotating-ring {
+  position: absolute;
+  border: 2px solid rgba(228, 222, 140, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin-ring linear infinite;
+}
+
+.ring-1 {
+  width: 320px;
+  height: 320px;
+  border-color: rgba(228, 222, 140, 0.3);
+  animation-duration: 8s;
+}
+
+.ring-2 {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(228, 222, 140, 0.2);
+  animation-duration: 12s;
+  animation-direction: reverse;
+}
+
+.ring-3 {
+  width: 440px;
+  height: 440px;
+  border-color: rgba(228, 222, 140, 0.1);
+  animation-duration: 16s;
+}
+
+@keyframes spin-ring {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Glow Effect */
+.glow-effect {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(228, 222, 140, 0.1) 0%,
+    rgba(228, 222, 140, 0.05) 25%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Exit Hint */
+.screensaver-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(228, 222, 140, 0.5);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Inter', sans-serif;
+  animation: fade-in-out 3s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .animated-text-container {
+    bottom: 25%;
+  }
+
+  .logo-animated {
+    width: 200px;
+    height: 200px;
+  }
+
+  .logo-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .screensaver-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .screensaver-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ring-1 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .ring-2 {
+    width: 290px;
+    height: 290px;
+  }
+
+  .ring-3 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .glow-effect {
+    width: 300px;
+    height: 300px;
+  }
+}
